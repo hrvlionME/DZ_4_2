@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+</head>
+<body>
+    <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+        <div style="display: flex; justify-content: center; align-items: center;">
+            <label>X = </label>
+            <input id="broj1" style="margin-left: 0.7rem"  type="number">
+        </div>
+        <div style="display: flex; justify-content: center; align-items: center; margin: 1rem;">
+            <label>Y = </label>
+            <input id="broj2" style="margin-left: 0.7rem" type="number">
+        </div>
+        <button id="dugme">Zbroji</button>
+        <hr style="width: 100%;">
+        <div style="display: flex;  justify-content: center; align-items: center;">
+            <label>REZULTAT = </label>
+            <input style="margin-left: 0.7rem" type="number" id="rezultat">
+        </div>
+    </div>
+    <script>
+        const broj1 = document.getElementById('broj1')
+        const broj2 = document.getElementById('broj2')
+        const rezultat = document.getElementById('rezultat')
+        const button = document.getElementById('dugme')
+
+        button.addEventListener("click", () => {
+            rezultat.value = parseInt(broj1.value) + parseInt(broj2.value)
+        })
+        
+    </script>
+</body>
+</html>

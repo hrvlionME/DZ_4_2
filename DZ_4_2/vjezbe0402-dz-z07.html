@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+</head>
+<body>
+    <form>
+        <label>Unesite dan(01-31)</label>
+        <input id="dan" type="number" min="1" max="31">
+        <label>Unesite mjesec(01-12)</label>
+        <input id="mjesec" type="number" min="1" max="12">
+        <label>Unesite godinu(1970)</label>
+        <input id="godina" type="number" max="2023">
+        <button id="dugme">Izracunaj</button>
+    </form>
+
+
+    <script>
+        const dan = document.getElementById('dan')
+        const mjesec = document.getElementById('mjesec')
+        const godina = document.getElementById('godina')
+        const button = document.getElementById('dugme')
+
+        const trenutno_vrijeme = new Date()
+        console.log(trenutno_vrijeme.getFullYear())
+
+        button.addEventListener("click", (e) => {
+            e.preventDefault()
+            alert("Osoba ima " + trenutno_vrijeme.getFullYear() - godina.value + " godina.")
+        })
+    </script>
+</body>
+</html>

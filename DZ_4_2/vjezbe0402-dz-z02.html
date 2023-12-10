@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+</head>
+<body>
+    <button id="dugme">Promijeni pozadinu</button>
+    <script>
+        const button = document.getElementById('dugme')
+        const body = document.querySelector('body')
+        const p = document.createElement('p')
+        button.after(p)
+
+        button.addEventListener("click", () => {
+            var slucBoja = Math.floor(Math.random()*16777215).toString(16)
+            body.style.backgroundColor = "#" + slucBoja
+            p.innerHTML = "Boja: " + slucBoja
+        })
+    </script>
+</body>
+</html>

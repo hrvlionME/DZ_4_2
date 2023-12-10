@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+</head>
+<body>
+    <img id="dugme" src="off-removebg-preview.png" alt="">
+    <img id="sijalica" src="zarulja_off_2.png" alt="">
+    <script>
+        const button = document.getElementById('dugme')
+        const sijalica = document.getElementById('sijalica')
+        
+        button.addEventListener("click", () => {
+            if(button.getAttribute('src') === "off-removebg-preview.png"){
+                button.src = "on-removebg-preview.png"
+                sijalica.src = "zarulja_on_2.png"
+            }
+            else{
+                button.src = "off-removebg-preview.png"
+                sijalica.src = "zarulja_off_2.png"
+            }
+        })
+        
+    </script>
+</body>
+</html>

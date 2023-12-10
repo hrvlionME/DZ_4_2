@@ -1,0 +1,23 @@
+<html>
+<head>
+</head>
+<body>
+<p><a href="#">Kliknite ovdje da dodate novi paragraf tekst</a></p>
+<p id="thisLocation">Novi paragrafi teksta će se pojaviti ispod</p>
+<p>Ovo je defaultn-ni prvi paragraf teksta</p>
+<script language="javascript" type="text/javascript">
+    const a = document.querySelector('a')
+    const p = document.getElementById("thisLocation")
+ 
+    let stari_p
+    a.addEventListener("click", () => {
+        const novi_p = document.createElement("p")
+        novi_p.innerHTML = "Novi paragraf"
+        p.parentNode.insertBefore(novi_p, p.nextSibling)
+        
+    })
+    
+
+</script>
+</body>
+</html>

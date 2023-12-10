@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Title</title>
+  </head>
+  <body>
+    <script>
+      let unosNiz = prompt("Unesi brojeve");
+      let brojeviNiz = preradi(unosNiz);
+      aritmeticka(brojeviNiz);
+      geometrijska(brojeviNiz);
+
+      function preradi(niz) {
+        var brojevi = niz.split(", ").map(Number);
+        return brojevi;
+      }
+
+      function aritmeticka(unosNiz) {
+        let zbroj = 0;
+        for (const broj of unosNiz) zbroj += broj;
+        let prosjek = zbroj / unosNiz.length;
+        document.write("Aritmeticka sredina je: " + prosjek + "</br>");
+      }
+
+      function geometrijska(unosNiz) {
+        let zbroj = 1;
+        for (const broj of unosNiz) zbroj *= broj;
+        let prosjek = Math.pow(zbroj, 1 / unosNiz.length);
+        document.write("Geometrijska sredina je:" + prosjek);
+      }
+    </script>
+  </body>
+</html>

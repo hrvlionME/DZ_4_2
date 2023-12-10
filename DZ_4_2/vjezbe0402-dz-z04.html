@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+</head>
+<body>
+    <form>
+        <input id="unos" type="number" placeholder="Unesi broj" max="5" min="1">
+    </form>
+    <script>
+        const unos = document.getElementById('unos')
+        const forma = document.querySelector('form')
+        const p_el = document.createElement('p')
+
+        unos.addEventListener("change", (event) => {
+            switch(parseInt(event.target.value)){
+                case 1:
+                    p_el.innerHTML = "1 - nedovoljan"
+                    break
+                case 2:
+                    p_el.innerHTML = "2 - dovoljan"
+                    break
+                case 3:
+                    p_el.innerHTML = "3 - dobar"
+                    break
+                case 4:
+                    p_el.innerHTML = "4 - vrlodobar"
+                    break
+                case 5:
+                    p_el.innerHTML = "5 - odlican"
+                    break
+                default:
+                    p_el.innerHTML = "Ocjena " + event.taget.value + " nije važeća."
+        }
+        forma.appendChild(p_el)
+    })
+
+
+    </script>
+</body>
+</html>

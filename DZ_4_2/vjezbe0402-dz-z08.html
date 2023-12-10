@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+</head>
+<body>  
+    <div>
+        <div>
+            <input id="op1" type="number">
+            <label>operand1</label>
+        </div>
+        <div>
+            <input id="op2" type="number">
+            <label>operand2</label>
+        </div>
+        <div>
+            <button id="add">+</button>
+            <button id="subtract">-</button>
+            <button id="multiply">*</button>
+            <button id="divide">/</button>
+        </div>
+        <div>
+            <button id="sin">sin</button>
+            <button id="cos">cos</button>
+            <button id="tan">tan</button>
+        </div>
+        <div>
+            <button id="ln">ln</button>
+            <button id="log">log</button>
+        </div>
+        <div>
+            <button id="pow2">^2</button>
+            <button id="pow3">^3</button>
+            <button id="pown">^n</button>
+        </div>
+    </div>
+    <script>
+        const operand1 = document.getElementById('op1')
+        const operand2 = document.getElementById('op2')
+        const add = document.getElementById('add')
+        const subtract = document.getElementById('subtract')
+        const multiply = document.getElementById('multiply')
+        const divide = document.getElementById('divide')
+        const sin = document.getElementById('sin')
+        const cos = document.getElementById('cos')
+        const tan = document.getElementById('tan')
+        const ln = document.getElementById('ln')
+        const log = document.getElementById('log')
+        const pow2 = document.getElementById('pow2')
+        const pow3 = document.getElementById('pow3')
+        const pown = document.getElementById('pown')
+
+        add.addEventListener("click", () => {
+            alert(parseFloat(operand1.value) + parseFloat(operand2.value))
+        })
+
+        subtract.addEventListener("click", () => {
+            alert(operand1.value - operand2.value)
+        })
+
+        multiply.addEventListener("click", () => {
+            alert(operand1.value * operand2.value)
+        })
+
+        divide.addEventListener("click", () => {
+            alert(operand1.value / operand2.value)
+        })
+
+        sin.addEventListener("click", () => {
+            alert(Math.sin(operand1.value))
+            alert(Math.sin(operand2.value))
+        })
+
+        cos.addEventListener("click", () => {
+            alert(Math.cos(operand1.value))
+            alert(Math.cos(operand2.value))
+        })
+
+        tan.addEventListener("click", () => {
+            alert(Math.tan(operand1.value))
+            alert(Math.tan(operand2.value))
+        })
+
+        ln.addEventListener("click", () => {
+            alert(Math.ln(operand1.value))
+            alert(Math.ln(operand2.value))
+        })
+
+        log.addEventListener("click", () => {
+            alert(Math.log(operand1.value))
+            alert(Math.log(operand2.value))
+        })
+
+        pow2.addEventListener("click", () => {
+            alert(Math.pow(operand1.value, 2))
+            alert(Math.pow(operand2.value, 2))
+        })
+
+        pow3.addEventListener("click", () => {
+            alert(Math.pow(operand1.value, 3))
+            alert(Math.pow(operand2.value, 3))
+        })
+
+        pown.addEventListener("click", () => {
+            alert(Math.pow(operand1.value, operand2.value))
+        })
+    </script>
+</body>
+</html>
